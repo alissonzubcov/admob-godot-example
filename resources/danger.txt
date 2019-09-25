@@ -1,0 +1,5 @@
+** comando keytool -v -genkey -v -keystore mygame.keystore -alias mygame -keyalg RSA -validity 10000
+
+** para gerar essa chave, usei o sdk android 24 e jdk 8
+alias: mygame
+password: padrao

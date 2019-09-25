@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/admob_script.gd" type="Script" id=1]
+[ext_resource path="res://assets/anim_frame.png" type="Texture" id=2]
+[ext_resource path="res://assets/eye.png" type="Texture" id=3]
+[ext_resource path="res://assets/fullscreen.png" type="Texture" id=4]
+[ext_resource path="res://assets/help.png" type="Texture" id=5]
+
+[node name="admob" type="Node2D"]
+z_index = 15
+z_as_relative = false
+script = ExtResource( 1 )
+
+[node name="onBanner" type="Label" parent="."]
+margin_left = 53.0
+margin_top = 1.703
+margin_right = 127.0
+margin_bottom = 15.703
+text = "Banner OFF"
+
+[node name="onVideo" type="Label" parent="."]
+margin_left = 138.0
+margin_top = 1.703
+margin_right = 212.0
+margin_bottom = 15.703
+text = "Video OFF"
+
+[node name="onIntersistial" type="Label" parent="."]
+margin_left = 216.0
+margin_top = 1.703
+margin_right = 314.0
+margin_bottom = 15.703
+text = "Intersistial OFF"
+
+[node name="video" type="Button" parent="."]
+margin_left = 18.0
+margin_top = 32.844
+margin_right = 62.0
+margin_bottom = 70.844
+disabled = true
+icon = ExtResource( 2 )
+
+[node name="baner" type="Button" parent="."]
+margin_left = 18.0
+margin_top = 78.3589
+margin_right = 62.0
+margin_bottom = 116.359
+disabled = true
+icon = ExtResource( 3 )
+
+[node name="interstital" type="Button" parent="."]
+margin_left = 18.0
+margin_top = 125.846
+margin_right = 62.0
+margin_bottom = 163.846
+disabled = true
+icon = ExtResource( 4 )
+
+[node name="buttonPopUp" type="Button" parent="."]
+margin_left = 323.641
+margin_top = 141.604
+margin_right = 367.641
+margin_bottom = 179.604
+rect_scale = Vector2( 0.8, 0.8 )
+icon = ExtResource( 5 )
+
+[node name="lblMake" type="Label" parent="buttonPopUp"]
+visible = false
+self_modulate = Color( 1, 0.423529, 0.109804, 1 )
+margin_left = -264.283
+margin_top = 25.0892
+margin_right = -80.2828
+margin_bottom = 39.0892
+text = "Feito por Alisson Zubcov"
+align = 1
+[connection signal="pressed" from="video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="baner" to="." method="_on_baner_pressed"]
+[connection signal="pressed" from="interstital" to="." method="_on_interstital_pressed"]
+[connection signal="pressed" from="buttonPopUp" to="." method="_on_buttonPopUp_pressed"]
